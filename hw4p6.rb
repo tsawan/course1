@@ -38,9 +38,11 @@ puts "Abracadabra".palindrome?
 module Enumerable
   def palindrome?
 	arr2 = self.to_a.reverse
-	arr2 == self
+	arr2 == self.to_a
   end 
 end
 
 puts [4,2,3,2,1].palindrome?
 puts [1,2,3,2,1].palindrome?
+enum=[1, 2, 1].each 
+puts enum.palindrome? 
